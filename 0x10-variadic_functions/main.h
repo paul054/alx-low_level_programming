@@ -1,19 +1,18 @@
-#ifndef MAIN_H
-#define MAIN_H
-
 #include <stdio.h>
-#include <stdlib.h>
-#include <limits.h>
+#include "../variadic_functions.h"
 
-int _putchar(char c);
-void *malloc_checked(unsigned int b);
-char *string_nconcat(char *s1, char *s2, unsigned int n);
-void *_calloc(unsigned int nmemb, unsigned int size);
-int *array_range(int min, int max);
-void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
-void errors(void);
-int _strlen(char *s);
-int is_digit(char *s);
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+	int sum;
 
-#endif
-
+	sum = sum_them_all(2, 98, 1024);
+	printf("%d\n", sum);
+	sum = sum_them_all(4, 98, 1024, 402, -1024);
+	printf("%d\n", sum);
+	return (0);
+}
